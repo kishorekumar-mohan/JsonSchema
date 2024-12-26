@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Voters Information",
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 18,
+      "message": {
+            "minimum": "Customer Error: 'age' must be at least 18."
+          }
+    }
+  },
+  "required": ["firstName", "lastName", "age"]
+}
